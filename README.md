@@ -1,1 +1,2 @@
-# shopee_demo
+# shopee-demo
+Learning and demo-tester

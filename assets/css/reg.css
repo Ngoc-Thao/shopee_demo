@@ -1,0 +1,25 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.reg__header {
+    height: 85px;
+    background-color: var(--white-color);
+}
+
+.reg__header-img {
+    width: 125px;
+    /* height: 35px; */
+}
+
+.reg__header h2 {
+    display: inline-block;
+}
+
+.reg__body {
+    height: 600px;
+    width: 100%;
+    background-color: var(--primary-color);
+}
