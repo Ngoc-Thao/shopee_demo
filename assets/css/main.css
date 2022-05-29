@@ -1,17 +1,18 @@
 .header {
-    height: 120px;
+    height: var(--header-height);
     background-image: linear-gradient(0, #fe5433, #f53e2d);
 }
 
 .header__navbar {
     display: flex;
     justify-content: space-between;
+    height: var(--navbar-height);
 }
 
 .header__navbar-list {
     list-style: none;
     padding: 0;
-    margin-top: -0.1rem;
+    margin: 4px 0 0 0;
 }
 
 .header__navbar-item {
@@ -73,6 +74,7 @@
 
 .header__navbar-item-qrcode {
     display: none;
+    z-index: 10;
     background-color: var(--white-color);
     width: 186px;
     position: absolute;
@@ -408,6 +410,9 @@
 }
 
 
+/* END */
+
+
 /* LOGIN */
 
 .auth-from__help {
@@ -430,3 +435,173 @@
     border: 1px solid #eaeaea;
     margin: 0 16px;
 }
+
+
+/* END */
+
+
+/* HEADER WITH SEARCH */
+
+
+/* LOGO SHOPEE */
+
+.header-with_search {
+    display: flex;
+    align-items: center;
+    height: var(--header-with-search-height);
+}
+
+.header__logo {
+    width: 200px;
+}
+
+.header__logo::before {
+    display: block;
+    content: "";
+    width: 150px;
+    height: var(--header-with-search-height);
+    -webkit-mask-image: url(../img/Shopee.svg);
+    -webkit-mask-repeat: no-repeat;
+    background-color: #fff;
+}
+
+
+/* END */
+
+
+/* SEARCH */
+
+.header__search {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    background-color: var(--white-color);
+    height: 40px;
+    border-radius: 2px;
+    flex-wrap: wrap;
+}
+
+.header__search-input-wrap {
+    flex: 1;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.header__search-input {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    outline: none;
+    border: none;
+    padding-left: 12px;
+    padding-right: 5px;
+    font-size: 1.25rem;
+    border-radius: 2px;
+}
+
+
+/* END */
+
+
+/* HISTORY */
+
+.header__search-history {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: calc(100% - 16px);
+    border-radius: 2px;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 3px #888;
+    display: none;
+}
+
+.header__search-history-heading {
+    margin: 0;
+    padding: 10px;
+    font-weight: 400;
+    opacity: 0.7;
+    font-size: 1.5rem;
+}
+
+.header__search-history-list {
+    margin: 0;
+    padding: 10px;
+    list-style-type: none;
+}
+
+.header__search-item {
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: block;
+    line-height: 2.75rem;
+    color: black;
+}
+
+.header__search-history-item:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+    cursor: pointer;
+}
+
+
+/* END */
+
+
+/* FORCUS */
+
+.header__search-input:focus~.header__search-history {
+    display: block;
+}
+
+
+/* END */
+
+
+/* SEARCH ICON */
+
+.header__search-option {
+    height: 34px;
+    width: 60px;
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    margin-right: 3px;
+    border-radius: 2px;
+}
+
+.header__search-icon {
+    color: var(--white-color);
+    font-size: 1.5rem;
+}
+
+.header__search-option:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+/* END */
+
+
+/* CART */
+
+.header__cart {
+    width: 150px;
+    text-align: center;
+}
+
+.header__cart-icon {
+    color: var(--white-color);
+    font-size: 2.5rem;
+}
+
+
+/* END */
+
+
+/* END */
+
+
+/*  */

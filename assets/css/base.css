@@ -4,6 +4,9 @@
     --text-color: #333;
     --primary-color: #ee4d2d;
     --border-color: #dbdbdb;
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
 }
 
 * {
@@ -42,6 +45,15 @@ html {
     }
 }
 
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
+
 
 /* MODAL */
 
@@ -52,6 +64,8 @@ html {
     right: 0;
     bottom: 0;
     left: 0;
+    display: none;
+    animation: fadeIn linear 0.2s;
 }
 
 .modal__overlay {
@@ -62,11 +76,14 @@ html {
 }
 
 .modal__body {
+    --growth-from: 0.5;
+    --growth-to: 1;
     margin: auto;
     background-color: white;
     position: relative;
     z-index: 1;
     border-radius: 3px;
+    animation: growth linear 0.2s;
 }
 
 
